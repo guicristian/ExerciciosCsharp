@@ -25,10 +25,15 @@ namespace CotaçãoMoeda
         private Image imgErro4 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 4.png");
         private Image imgErro5 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
         private Image imgErro6 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
+        
         private int temaEscolhido;
         private string palavraEscolhida;
-        private int qntTentativas;
+        private int qntTentativas = 6;
+        private string tentativa;
+        private bool letraEncontrada;
+        
         private char[] letrasCorretas;
+        private char[] letrasSecretas;
         private string[] temaAdjetivos = new string[]
         {
             "Alegre",
@@ -69,6 +74,7 @@ namespace CotaçãoMoeda
             "Rugby",
             "Esqui"
         };
+        
 
 
         private void radioButtonTema1_CheckedChanged(object sender, EventArgs e)
@@ -99,6 +105,25 @@ namespace CotaçãoMoeda
             labelTentativas.Visible = true;
             textBoxInput.Visible = true;
             bnt_Testar.Visible = true;
+            telaJogo.Visible = true;
+            telaJogo.Image = imgPadrao;
+         
+            
+        }
+        private void terminarJogo()
+        {
+            bnt_Start.Visible = true;
+            radioButtonTema1.Visible = true;
+            radioButtonTema2.Visible = true;
+            radioButtonTema3.Visible = true;
+            listBoxRadio.Visible = true;
+            labelInput.Visible = false;
+            labelPalavraSecreta.Visible = false;
+            labelTentativas.Visible = false;
+            textBoxInput.Visible = false;
+            bnt_Testar.Visible = false;
+            qntTentativas = 6;
+            telaJogo.Visible = false;
         }
        
         
@@ -108,6 +133,7 @@ namespace CotaçãoMoeda
             {
                 case 1:
                     palavraEscolhida = temaAdjetivos[random.Next(temaAdjetivos.Length)].ToUpper();
+                    letrasSecretas = palavraEscolhida.ToCharArray();
                     letrasCorretas = new string('_', palavraEscolhida.Length).ToCharArray();
 
                     for (int i = 0; i < palavraEscolhida.Length; i++)
@@ -117,10 +143,12 @@ namespace CotaçãoMoeda
                             letrasCorretas[i] = ' ';
                         }
                     }
+                    labelPalavraSecreta.Text = string.Join(" ", letrasCorretas);
                     atualizarTela();
                     break;
                 case 2:
                     palavraEscolhida = temaFilmes[random.Next(temaFilmes.Length)].ToUpper();
+                    letrasSecretas = palavraEscolhida.ToCharArray();
                     letrasCorretas = new string('_', palavraEscolhida.Length).ToCharArray();
 
                     for (int i = 0; i < palavraEscolhida.Length; i++)
@@ -130,10 +158,12 @@ namespace CotaçãoMoeda
                             letrasCorretas[i] = ' ';
                         }
                     }
+                    labelPalavraSecreta.Text = string.Join(" ", letrasCorretas);
                     atualizarTela();
                     break;
                 case 3:
                     palavraEscolhida = temaEsportes[random.Next(temaEsportes.Length)].ToUpper();
+                    letrasSecretas = palavraEscolhida.ToCharArray();
                     letrasCorretas = new string('_', palavraEscolhida.Length).ToCharArray();
 
                     for (int i = 0; i < palavraEscolhida.Length; i++)
@@ -143,6 +173,7 @@ namespace CotaçãoMoeda
                             letrasCorretas[i] = ' ';
                         }
                     }
+                    labelPalavraSecreta.Text = string.Join(" ", letrasCorretas);
                     atualizarTela();
                     break;
                 default:
@@ -152,16 +183,40 @@ namespace CotaçãoMoeda
             }
         }
 
+       
+        
         private void bnt_Start_Click(object sender, EventArgs e)
         {
             start();
            
         }
 
-
+        
         private void bnt_Testar_Click(object sender, EventArgs e)
         {
+            letraEncontrada = false;
+            if (qntTentativas > 0)
+            {
 
+                for (int i = 0; i < letrasSecretas.Length; i++)
+                {
+                    if (letrasSecretas[i].ToString() == tentativa)
+                    {
+                        letraEncontrada = true;  
+                        
+                    }
+                }
+                    if (!letraEncontrada)
+                    {
+                        qntTentativas--;
+                        
+                    }
+                labelTentativas.Text = $"{qntTentativas} Tentativas restantes";
+            }
+            else
+            {
+                terminarJogo();
+            }
         }
     }
 }
