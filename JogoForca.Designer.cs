@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Interface = new System.Windows.Forms.PictureBox();
-            this.PalavraSecreta = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.telaJogo = new System.Windows.Forms.PictureBox();
+            this.labelPalavraSecreta = new System.Windows.Forms.Label();
+            this.labelInput = new System.Windows.Forms.Label();
+            this.textBoxInput = new System.Windows.Forms.TextBox();
             this.bnt_Testar = new System.Windows.Forms.Button();
             this.listBoxRadio = new System.Windows.Forms.ListBox();
             this.radioButtonTema1 = new System.Windows.Forms.RadioButton();
             this.radioButtonTema2 = new System.Windows.Forms.RadioButton();
             this.radioButtonTema3 = new System.Windows.Forms.RadioButton();
             this.bnt_Start = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Interface)).BeginInit();
+            this.labelTentativas = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.telaJogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // Interface
+            // telaJogo
             // 
-            this.Interface.InitialImage = null;
-            this.Interface.Location = new System.Drawing.Point(118, 31);
-            this.Interface.Name = "Interface";
-            this.Interface.Size = new System.Drawing.Size(244, 243);
-            this.Interface.TabIndex = 0;
-            this.Interface.TabStop = false;
+            this.telaJogo.InitialImage = null;
+            this.telaJogo.Location = new System.Drawing.Point(195, 22);
+            this.telaJogo.Name = "telaJogo";
+            this.telaJogo.Size = new System.Drawing.Size(244, 243);
+            this.telaJogo.TabIndex = 0;
+            this.telaJogo.TabStop = false;
             // 
-            // PalavraSecreta
+            // labelPalavraSecreta
             // 
-            this.PalavraSecreta.AutoSize = true;
-            this.PalavraSecreta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PalavraSecreta.Location = new System.Drawing.Point(185, 295);
-            this.PalavraSecreta.Name = "PalavraSecreta";
-            this.PalavraSecreta.Size = new System.Drawing.Size(112, 18);
-            this.PalavraSecreta.TabIndex = 1;
-            this.PalavraSecreta.Text = "Palavra Secreta";
-            this.PalavraSecreta.Visible = false;
+            this.labelPalavraSecreta.AutoSize = true;
+            this.labelPalavraSecreta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPalavraSecreta.Location = new System.Drawing.Point(257, 280);
+            this.labelPalavraSecreta.Name = "labelPalavraSecreta";
+            this.labelPalavraSecreta.Size = new System.Drawing.Size(112, 18);
+            this.labelPalavraSecreta.TabIndex = 1;
+            this.labelPalavraSecreta.Text = "Palavra Secreta";
+            this.labelPalavraSecreta.Visible = false;
             // 
-            // label2
+            // labelInput
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(152, 332);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Coloque uma letra";
-            this.label2.Visible = false;
+            this.labelInput.AutoSize = true;
+            this.labelInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInput.Location = new System.Drawing.Point(217, 316);
+            this.labelInput.Name = "labelInput";
+            this.labelInput.Size = new System.Drawing.Size(129, 18);
+            this.labelInput.TabIndex = 2;
+            this.labelInput.Text = "Coloque uma letra";
+            this.labelInput.Visible = false;
             // 
-            // textBox1
+            // textBoxInput
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(287, 329);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(32, 24);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Visible = false;
+            this.textBoxInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxInput.Location = new System.Drawing.Point(367, 313);
+            this.textBoxInput.Name = "textBoxInput";
+            this.textBoxInput.Size = new System.Drawing.Size(32, 24);
+            this.textBoxInput.TabIndex = 3;
+            this.textBoxInput.Visible = false;
             // 
             // bnt_Testar
             // 
             this.bnt_Testar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Testar.Location = new System.Drawing.Point(188, 372);
+            this.bnt_Testar.Location = new System.Drawing.Point(273, 343);
             this.bnt_Testar.Name = "bnt_Testar";
             this.bnt_Testar.Size = new System.Drawing.Size(108, 33);
             this.bnt_Testar.TabIndex = 4;
@@ -155,54 +155,53 @@
             this.bnt_Start.UseVisualStyleBackColor = true;
             this.bnt_Start.Click += new System.EventHandler(this.bnt_Start_Click);
             // 
-            // label1
+            // labelTentativas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 170);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tentantivas restantes X";
-            this.label1.Visible = false;
+            this.labelTentativas.AutoSize = true;
+            this.labelTentativas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTentativas.Location = new System.Drawing.Point(12, 216);
+            this.labelTentativas.Name = "labelTentativas";
+            this.labelTentativas.Size = new System.Drawing.Size(164, 18);
+            this.labelTentativas.TabIndex = 10;
+            this.labelTentativas.Text = "6 Tentantivas restantes ";
+            this.labelTentativas.Visible = false;
             // 
             // JogoForca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 417);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(488, 405);
+            this.Controls.Add(this.labelTentativas);
             this.Controls.Add(this.bnt_Start);
             this.Controls.Add(this.radioButtonTema3);
             this.Controls.Add(this.radioButtonTema2);
             this.Controls.Add(this.radioButtonTema1);
             this.Controls.Add(this.listBoxRadio);
             this.Controls.Add(this.bnt_Testar);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.PalavraSecreta);
-            this.Controls.Add(this.Interface);
+            this.Controls.Add(this.textBoxInput);
+            this.Controls.Add(this.labelInput);
+            this.Controls.Add(this.labelPalavraSecreta);
+            this.Controls.Add(this.telaJogo);
             this.Name = "JogoForca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "jogoForca";
-            ((System.ComponentModel.ISupportInitialize)(this.Interface)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.telaJogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox Interface;
-        private System.Windows.Forms.Label PalavraSecreta;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label labelPalavraSecreta;
+        private System.Windows.Forms.Label labelInput;
+        private System.Windows.Forms.TextBox textBoxInput;
         private System.Windows.Forms.Button bnt_Testar;
         private System.Windows.Forms.ListBox listBoxRadio;
         private System.Windows.Forms.RadioButton radioButtonTema1;
         private System.Windows.Forms.RadioButton radioButtonTema2;
         private System.Windows.Forms.RadioButton radioButtonTema3;
         private System.Windows.Forms.Button bnt_Start;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTentativas;
+        public System.Windows.Forms.PictureBox telaJogo;
     }
 }

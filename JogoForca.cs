@@ -18,6 +18,13 @@ namespace CotaçãoMoeda
             InitializeComponent();
         }
 
+        private Image imgPadrao = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\Forca.png");
+        private Image imgErro1 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 1.png");
+        private Image imgErro2 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 2.png");
+        private Image imgErro3 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 3.png");
+        private Image imgErro4 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 4.png");
+        private Image imgErro5 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
+        private Image imgErro6 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
         private int temaEscolhido;
         private string palavraEscolhida;
         private int qntTentativas;
@@ -77,24 +84,23 @@ namespace CotaçãoMoeda
         {
             temaEscolhido = 3;
         }
-
-        Random random = new Random();
-
+       
         
+        Random random = new Random();
         private void atualizarTela()
         {
-
-        }
-
-        private void iniciarJogo()
-        {
+            bnt_Start.Visible = false;   
             radioButtonTema1.Visible = false;
             radioButtonTema2.Visible = false;
             radioButtonTema3.Visible = false;
             listBoxRadio.Visible = false;
-
-
+            labelInput.Visible = true;
+            labelPalavraSecreta.Visible = true;
+            labelTentativas.Visible = true;
+            textBoxInput.Visible = true;
+            bnt_Testar.Visible = true;
         }
+       
         
         private void start()
         {
@@ -143,17 +149,13 @@ namespace CotaçãoMoeda
 
                     MessageBox.Show("Selecione um tema");
                     break;
-
-                    
             }
-
         }
 
         private void bnt_Start_Click(object sender, EventArgs e)
         {
             start();
-
-            
+           
         }
 
 
