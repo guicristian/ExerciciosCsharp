@@ -45,9 +45,9 @@
             // telaJogo
             // 
             this.telaJogo.InitialImage = null;
-            this.telaJogo.Location = new System.Drawing.Point(195, 22);
+            this.telaJogo.Location = new System.Drawing.Point(186, 22);
             this.telaJogo.Name = "telaJogo";
-            this.telaJogo.Size = new System.Drawing.Size(244, 243);
+            this.telaJogo.Size = new System.Drawing.Size(265, 273);
             this.telaJogo.TabIndex = 0;
             this.telaJogo.TabStop = false;
             // 
@@ -55,7 +55,7 @@
             // 
             this.labelPalavraSecreta.AutoSize = true;
             this.labelPalavraSecreta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPalavraSecreta.Location = new System.Drawing.Point(257, 280);
+            this.labelPalavraSecreta.Location = new System.Drawing.Point(257, 307);
             this.labelPalavraSecreta.Name = "labelPalavraSecreta";
             this.labelPalavraSecreta.Size = new System.Drawing.Size(112, 18);
             this.labelPalavraSecreta.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.labelInput.AutoSize = true;
             this.labelInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInput.Location = new System.Drawing.Point(217, 316);
+            this.labelInput.Location = new System.Drawing.Point(230, 340);
             this.labelInput.Name = "labelInput";
             this.labelInput.Size = new System.Drawing.Size(129, 18);
             this.labelInput.TabIndex = 2;
@@ -76,7 +76,7 @@
             // textBoxInput
             // 
             this.textBoxInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInput.Location = new System.Drawing.Point(367, 313);
+            this.textBoxInput.Location = new System.Drawing.Point(365, 337);
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.Size = new System.Drawing.Size(32, 24);
             this.textBoxInput.TabIndex = 3;
@@ -85,7 +85,7 @@
             // bnt_Testar
             // 
             this.bnt_Testar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Testar.Location = new System.Drawing.Point(273, 343);
+            this.bnt_Testar.Location = new System.Drawing.Point(261, 376);
             this.bnt_Testar.Name = "bnt_Testar";
             this.bnt_Testar.Size = new System.Drawing.Size(108, 33);
             this.bnt_Testar.TabIndex = 4;
@@ -100,16 +100,16 @@
             this.listBoxRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxRadio.FormattingEnabled = true;
             this.listBoxRadio.ItemHeight = 18;
-            this.listBoxRadio.Location = new System.Drawing.Point(27, 22);
+            this.listBoxRadio.Location = new System.Drawing.Point(12, 13);
             this.listBoxRadio.Name = "listBoxRadio";
-            this.listBoxRadio.Size = new System.Drawing.Size(123, 94);
+            this.listBoxRadio.Size = new System.Drawing.Size(122, 112);
             this.listBoxRadio.TabIndex = 5;
             // 
             // radioButtonTema1
             // 
             this.radioButtonTema1.AutoSize = true;
             this.radioButtonTema1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTema1.Location = new System.Drawing.Point(42, 31);
+            this.radioButtonTema1.Location = new System.Drawing.Point(27, 31);
             this.radioButtonTema1.Name = "radioButtonTema1";
             this.radioButtonTema1.Size = new System.Drawing.Size(85, 22);
             this.radioButtonTema1.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             this.radioButtonTema2.AutoSize = true;
             this.radioButtonTema2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTema2.Location = new System.Drawing.Point(42, 59);
+            this.radioButtonTema2.Location = new System.Drawing.Point(27, 59);
             this.radioButtonTema2.Name = "radioButtonTema2";
             this.radioButtonTema2.Size = new System.Drawing.Size(70, 22);
             this.radioButtonTema2.TabIndex = 7;
@@ -135,7 +135,7 @@
             // 
             this.radioButtonTema3.AutoSize = true;
             this.radioButtonTema3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTema3.Location = new System.Drawing.Point(42, 87);
+            this.radioButtonTema3.Location = new System.Drawing.Point(26, 87);
             this.radioButtonTema3.Name = "radioButtonTema3";
             this.radioButtonTema3.Size = new System.Drawing.Size(86, 22);
             this.radioButtonTema3.TabIndex = 8;
@@ -147,7 +147,7 @@
             // bnt_Start
             // 
             this.bnt_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Start.Location = new System.Drawing.Point(53, 122);
+            this.bnt_Start.Location = new System.Drawing.Point(37, 131);
             this.bnt_Start.Name = "bnt_Start";
             this.bnt_Start.Size = new System.Drawing.Size(75, 33);
             this.bnt_Start.TabIndex = 9;
@@ -159,18 +159,18 @@
             // 
             this.labelTentativas.AutoSize = true;
             this.labelTentativas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTentativas.Location = new System.Drawing.Point(12, 216);
+            this.labelTentativas.Location = new System.Drawing.Point(24, 217);
             this.labelTentativas.Name = "labelTentativas";
-            this.labelTentativas.Size = new System.Drawing.Size(164, 18);
+            this.labelTentativas.Size = new System.Drawing.Size(152, 18);
             this.labelTentativas.TabIndex = 10;
-            this.labelTentativas.Text = "6 Tentantivas restantes ";
+            this.labelTentativas.Text = "Tentantivas restantes ";
             this.labelTentativas.Visible = false;
             // 
             // JogoForca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 405);
+            this.ClientSize = new System.Drawing.Size(523, 432);
             this.Controls.Add(this.labelTentativas);
             this.Controls.Add(this.bnt_Start);
             this.Controls.Add(this.radioButtonTema3);

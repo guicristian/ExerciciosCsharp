@@ -19,60 +19,95 @@ namespace CotaçãoMoeda
         }
 
         private Image imgPadrao = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\Forca.png");
-        private Image imgErro1 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 1.png");
-        private Image imgErro2 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 2.png");
-        private Image imgErro3 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 3.png");
-        private Image imgErro4 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 4.png");
-        private Image imgErro5 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
-        private Image imgErro6 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
+        private Image imgVidas6 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 1.png");
+        private Image imgVidas5 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 2.png");
+        private Image imgVidas4 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 3.png");
+        private Image imgVidas3 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 4.png");
+        private Image imgVidas2 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 5.png");
+        private Image imgVidas1 = Image.FromFile("C:\\Users\\guilherme\\source\\repos\\guicristian\\ExerciciosCsharp\\image\\erro 6.png");
         
+      
         private int temaEscolhido;
-        private string palavraEscolhida;
+        private int acerto = 0;
         private int qntTentativas = 6;
+        private string palavraEscolhida;
+        private string result;
         private string tentativa;
-        private bool letraEncontrada;
+        private bool letraEncontrada; 
         
+
         private char[] letrasCorretas;
         private char[] letrasSecretas;
         private string[] temaAdjetivos = new string[]
         {
-            "Alegre",
-            "Triste",
-            "Rapido",
-            "Devagar",
-            "Inteligente",
-            "Forte",
-            "Fraco",
-            "Corajoso",
-            "Medroso",
-            "Amigavel"
+            "horrível",
+            "terrível",
+            "medonho",
+            "detestável",
+            "desagradável",
+            "repugnante",
+            "abominável",
+            "nojento",
+            "péssimo",
+            "desastroso",
+            "deplorável",
+            "miserável",
+            "pavoroso",
+            "odioso",
+            "tóxico",
+            "insuportável",
+            "lamentável",
+            "horripilante",
+            "degradante",
+            "decepcionante"
+
+
         };
         private string[] temaFilmes = new string[]
         {
-            "O Poderoso Chefao",
+            "O Poderoso Chefão",
             "Matrix",
             "Vingadores",
             "Titanic",
             "Interestelar",
             "Gladiador",
-            "O Senhor dos Aneis",
+            "O Senhor dos Anéis",
             "Harry Potter",
             "Jurassic Park",
             "Star Wars",
-            "Guardioes da galaxia"
+            "Guardiões da Galáxia",
+            "A Origem",
+            "Forrest Gump",
+            "Pulp Fiction,
+            "Clube da Luta",
+            "O Cavaleiro das Trevas",
+            "O Resgate do Soldado Ryan",
+            "O Silêncio dos Inocentes",
+            "Os Incríveis",
+            "A Lista de Schindler"
         };
         private string[] temaEsportes = new string[]
         {
             "Futebol",
             "Basquete",
             "Volei",
-            "Tenis",
-            "Natacao",
+            "Tênis",
+            "Natação",
             "Corrida",
             "Ciclismo",
             "Boxe",
             "Rugby",
-            "Esqui"
+            "Esqui",
+            "Golfe",
+            "Beisebol",
+            "Handebol",
+            "Hóquei",
+            "Badminton",
+            "Handebol",
+            "Judô",
+            "Ginástica",
+            "Surf",
+            "Ginastica"
         };
         
 
@@ -124,6 +159,53 @@ namespace CotaçãoMoeda
             bnt_Testar.Visible = false;
             qntTentativas = 6;
             telaJogo.Visible = false;
+
+            MessageBox.Show($"Você perdeu a resposta correta era: {palavraEscolhida}");
+        }
+        private void contarErro()
+        {
+            switch (qntTentativas)
+            {
+                case  5:
+                    telaJogo.Image = imgVidas6;
+                    break;
+                case 4:
+                    telaJogo.Image = imgVidas5;
+                    break;
+                case 3:
+                    telaJogo.Image = imgVidas4;
+                    break;
+                case 2:
+                    telaJogo.Image = imgVidas3;
+                    break;
+                case 1:
+                    telaJogo.Image = imgVidas2;
+                    break;
+                case 0 :
+                    telaJogo.Image = imgVidas1;
+                    break;
+                default:
+                    break;  
+
+            }
+        }
+        private void vencerJogo()
+        {
+            bnt_Start.Visible = true;
+            radioButtonTema1.Visible = true;
+            radioButtonTema2.Visible = true;
+            radioButtonTema3.Visible = true;
+            listBoxRadio.Visible = true;
+            labelInput.Visible = false;
+            labelPalavraSecreta.Visible = false;
+            labelTentativas.Visible = false;
+            textBoxInput.Visible = false;
+            bnt_Testar.Visible = false;
+            qntTentativas = 6;
+            telaJogo.Visible = false;
+            MessageBox.Show("Parabens você é o meior");
+            this.Close();  
+
         }
        
         
@@ -194,24 +276,46 @@ namespace CotaçãoMoeda
         
         private void bnt_Testar_Click(object sender, EventArgs e)
         {
+            
+
+            tentativa = textBoxInput.Text.ToUpper();
             letraEncontrada = false;
+
+
             if (qntTentativas > 0)
             {
-
-                for (int i = 0; i < letrasSecretas.Length; i++)
+                if (acerto == letrasSecretas.Length - 1)
                 {
-                    if (letrasSecretas[i].ToString() == tentativa)
-                    {
-                        letraEncontrada = true;  
-                        
-                    }
+                    vencerJogo();
                 }
+                else
+                {
+                    for (int i = 0; i < letrasSecretas.Length; i++)
+                    {
+                        if (letrasSecretas[i].ToString() == tentativa)
+                        {
+                            letraEncontrada = true;
+
+                            if (letraEncontrada == true)
+                            {
+
+                                letrasCorretas[i] = letrasSecretas[i];
+                                result = string.Join(" ", letrasCorretas);
+                                labelPalavraSecreta.Text = result;
+                                acerto++;
+
+                            }
+                        }
+                    }
                     if (!letraEncontrada)
                     {
                         qntTentativas--;
-                        
+                        textBoxInput.Text = "";
+                        contarErro();
                     }
-                labelTentativas.Text = $"{qntTentativas} Tentativas restantes";
+                    textBoxInput.Text = "";
+                    labelTentativas.Text = $"{qntTentativas} Tentativas restantes";
+                }
             }
             else
             {
