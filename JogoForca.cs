@@ -38,6 +38,7 @@ namespace CotaçãoMoeda
 
         private char[] letrasCorretas;
         private char[] letrasSecretas;
+        
         private string[] temaAdjetivos = new string[]
         {
             "horrível",
@@ -63,6 +64,7 @@ namespace CotaçãoMoeda
 
 
         };
+        
         private string[] temaFilmes = new string[]
         {
             "O Poderoso Chefão",
@@ -78,7 +80,7 @@ namespace CotaçãoMoeda
             "Guardiões da Galáxia",
             "A Origem",
             "Forrest Gump",
-            "Pulp Fiction,
+            "Pulp Fiction",
             "Clube da Luta",
             "O Cavaleiro das Trevas",
             "O Resgate do Soldado Ryan",
@@ -86,6 +88,7 @@ namespace CotaçãoMoeda
             "Os Incríveis",
             "A Lista de Schindler"
         };
+        
         private string[] temaEsportes = new string[]
         {
             "Futebol",
@@ -109,7 +112,6 @@ namespace CotaçãoMoeda
             "Surf",
             "Ginastica"
         };
-        
 
 
         private void radioButtonTema1_CheckedChanged(object sender, EventArgs e)
@@ -125,7 +127,7 @@ namespace CotaçãoMoeda
         {
             temaEscolhido = 3;
         }
-       
+
         
         Random random = new Random();
         private void atualizarTela()
@@ -161,6 +163,7 @@ namespace CotaçãoMoeda
             telaJogo.Visible = false;
 
             MessageBox.Show($"Você perdeu a resposta correta era: {palavraEscolhida}");
+            this.Close();
         }
         private void contarErro()
         {
@@ -203,12 +206,11 @@ namespace CotaçãoMoeda
             bnt_Testar.Visible = false;
             qntTentativas = 6;
             telaJogo.Visible = false;
-            MessageBox.Show("Parabens você é o meior");
+            MessageBox.Show($"A palavra era {palavraEscolhida}, Parabens você é o meior");
             this.Close();  
 
         }
        
-        
         private void start()
         {
             switch (temaEscolhido)
@@ -264,8 +266,6 @@ namespace CotaçãoMoeda
                     break;
             }
         }
-
-       
         
         private void bnt_Start_Click(object sender, EventArgs e)
         {
@@ -273,16 +273,13 @@ namespace CotaçãoMoeda
            
         }
 
-        
         private void bnt_Testar_Click(object sender, EventArgs e)
         {
-            
 
             tentativa = textBoxInput.Text.ToUpper();
             letraEncontrada = false;
 
-
-            if (qntTentativas > 0)
+            if (qntTentativas > 1)
             {
                 if (acerto == letrasSecretas.Length - 1)
                 {
